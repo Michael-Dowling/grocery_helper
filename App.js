@@ -69,15 +69,13 @@ export default class FirebaseReactNativeSample extends Component {
     this.setState({ dialogVisible: false });
   };
   handleAdd = () => {
-    console.log(this.state.grocery);
     var grocery = this.state.grocery;
-    var quantity = 2;
-    //this.state.quantity = 2;
+    var quantity = this.state.quantity;
     this.itemsRef.push({
       grocery,
       quantity
     });
-    this.setState({dialogVisible: false})
+    this.setState({quanDialogVisible: false});
   }
 
   render() {
@@ -106,7 +104,7 @@ export default class FirebaseReactNativeSample extends Component {
           <Dialog.Title>Add Groceries</Dialog.Title>
           <Dialog.Button label="Cancel" onPress={this.handleCancel}/>
           <Dialog.Button label="Add" onPress={this.handleAdd}/>
-          <Dialog.Input label="Type below:"
+          <Dialog.Input label="Enter quantity:"
             value={this.state.quantity}
             onChangeText={quantity => this.setState({quantity})}>
           </Dialog.Input>
@@ -115,23 +113,12 @@ export default class FirebaseReactNativeSample extends Component {
     )
   }
 
+  getQuantity = () => {
+    this.setState({dialogVisible: false});
+    this.setState({quanDialogVisible: true});
+  }
   _addItem() {
-    this.setState({dialogVisible: true})
-
-    // Alert.alert(
-    //   'Add Item',
-    //   null,
-    //   [
-    //     {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-    //     {
-    //       text: 'Add',
-    //       onPress: (text) => {
-    //         this.itemsRef.push({ title: text })
-    //       }
-    //     },
-    //   ],
-    //   'plain-text'
-    // );
+    this.setState({dialogVisible: true});
   }
 
   _renderItem(item) {
