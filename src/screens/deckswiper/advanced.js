@@ -52,9 +52,10 @@ class AdvancedDeck extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
+
           <Body>
             <Title>Advanced Deck Swiper</Title>
           </Body>
@@ -116,12 +117,12 @@ class AdvancedDeck extends Component {
           }}
         >
           <Button iconLeft onPress={() => this._deckSwiper._root.swipeLeft()}>
-            <Icon name="arrow-back" />
+            <Icon name="ios-arrow-back" />
             <Text>Swipe Left</Text>
           </Button>
           <Button iconRight onPress={() => this._deckSwiper._root.swipeRight()}>
             <Text>Swipe Right</Text>
-            <Icon name="arrow-forward" />
+            <Icon name="ios-arrow-forward" />
           </Button>
         </View>
       </Container>

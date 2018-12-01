@@ -45,9 +45,9 @@ class NHAccordion extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.openDrawer()}
             >
-              <Icon name="menu" />
+              <Icon name="ios-menu" />
             </Button>
           </Left>
           <Body>
@@ -70,7 +70,7 @@ class NHAccordion extends Component {
                   </Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="ios-arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>}
           />

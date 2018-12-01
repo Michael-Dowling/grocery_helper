@@ -24,7 +24,7 @@ class Header8 extends Component {
         >
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" style={{ color: "#FFF" }} />
+              <Icon name="ios-arrow-back" style={{ color: "#FFF" }} />
             </Button>
           </Left>
           <Body>

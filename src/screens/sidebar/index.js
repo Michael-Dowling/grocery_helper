@@ -22,7 +22,7 @@ const datas = [
     icon: "phone-portrait",
     bg: "#C5F442"
   },
-  {
+  /*{
     name: "Header",
     route: "Header",
     icon: "arrow-up",
@@ -174,7 +174,7 @@ const datas = [
     icon: "image",
     bg: "#cc0000",
     types: "2"
-  },
+  },*/
   {
     name: "Toast",
     route: "NHToast",

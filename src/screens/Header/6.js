@@ -20,7 +20,7 @@ class Header6 extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -28,13 +28,13 @@ class Header6 extends Component {
           </Body>
           <Right>
             <Button transparent>
-              <Icon name="search" />
+              <Icon name="ios-search" />
             </Button>
             <Button transparent>
-              <Icon name="heart" />
+              <Icon name="ios-heart" />
             </Button>
             <Button transparent>
-              <Icon name="more" />
+              <Icon name="ios-more" />
             </Button>
           </Right>
         </Header>

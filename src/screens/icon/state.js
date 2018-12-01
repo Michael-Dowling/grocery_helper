@@ -25,7 +25,7 @@ class StateIcon extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -38,31 +38,31 @@ class StateIcon extends Component {
           <Grid>
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="logo-apple" />
+                <Icon name="ios-logo-apple" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   logo-apple
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="pizza" />
+                <Icon name="ios-pizza" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   pizza
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="person" />
+                <Icon name="ios-person" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   person
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="beer" />
+                <Icon name="ios-beer" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   beer
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="bicycle" />
+                <Icon name="ios-bicycle" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   bicycle
                 </Text>
@@ -71,31 +71,31 @@ class StateIcon extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="navigate" />
+                <Icon name="ios-navigate" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   navigate
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="cloud-circle" />
+                <Icon name="ios-cloud-circle" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   cloud-circle
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="pie" />
+                <Icon name="ios-pie" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   pie
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="bookmarks" />
+                <Icon name="ios-bookmarks" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   bookmarks
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="pulse" />
+                <Icon name="ios-pulse" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   pulse
                 </Text>
@@ -104,7 +104,7 @@ class StateIcon extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="camera" />
+                <Icon name="ios-camera" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   camera
                 </Text>
@@ -116,7 +116,7 @@ class StateIcon extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="film" />
+                <Icon name="ios-film" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   film
                 </Text>
@@ -128,7 +128,7 @@ class StateIcon extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="paper" />
+                <Icon name="ios-paper" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   paper
                 </Text>
@@ -137,31 +137,31 @@ class StateIcon extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="paper-plane" />
+                <Icon name="ios-paper-plane" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   paper-plane
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="cart" />
+                <Icon name="ios-cart" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   cart
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="flask" />
+                <Icon name="ios-flask" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   flask
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="paw" />
+                <Icon name="ios-paw" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   paw
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="rose" />
+                <Icon name="ios-rose" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   rose
                 </Text>
@@ -170,31 +170,31 @@ class StateIcon extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="pint" />
+                <Icon name="ios-pint" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   pint
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="shuffle" />
+                <Icon name="ios-shuffle" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   shuffle
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="keypad" />
+                <Icon name="ios-keypad" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   keypad
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="eye" />
+                <Icon name="ios-eye" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   eye
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="glasses" />
+                <Icon name="ios-glasses" />
                 <Text numberOfLines={1} style={styles.iconText}>
                   glasses
                 </Text>

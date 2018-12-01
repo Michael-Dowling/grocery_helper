@@ -1,6 +1,6 @@
 import React from "react";
 import { Root } from "native-base";
-import { StackNavigator, DrawerNavigator } from "react-navigation";
+import { createStackNavigator, createDrawerNavigator , createAppContainer} from "react-navigation";
 
 import Header from "./screens/Header/";
 import Header1 from "./screens/Header/1";
@@ -107,7 +107,7 @@ import AccordionIcon from "./screens/accordion/accordion-icon";
 import AccordionIconStyle from "./screens/accordion/accordion-icon-style";
 import AccordionHeaderContentStyle from "./screens/accordion/accordion-header-content-style";
 import AccordionCustomHeaderContent from "./screens/accordion/accordion-custom-header-content";
-
+import Icon from 'react-native-ionicons'
 import Home from "./screens/home/";
 import Anatomy from "./screens/anatomy/";
 import Footer from "./screens/footer/";
@@ -137,7 +137,7 @@ import Actionsheet from "./screens/actionsheet";
 import NHAccordion from "./screens/accordion/";
 import NHDatePicker from "./screens/datepicker/";
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
     Anatomy: { screen: Anatomy },
@@ -176,7 +176,7 @@ const Drawer = DrawerNavigator(
   }
 );
 
-const AppNavigator = StackNavigator(
+const AppNavigator = createStackNavigator(
   {
     Drawer: { screen: Drawer },
 
@@ -308,8 +308,5 @@ const AppNavigator = StackNavigator(
     headerMode: "none"
   }
 );
-
-export default () =>
-  <Root>
-    <AppNavigator />
-  </Root>;
+const App = createAppContainer(AppNavigator);
+export default App;

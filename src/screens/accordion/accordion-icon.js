@@ -37,7 +37,7 @@ class AccordionIcon extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -50,8 +50,8 @@ class AccordionIcon extends Component {
             dataArray={dataArray}
             animation={true}
             expanded={true}
-            icon="add"
-            expandedIcon="remove"
+            icon="ios-add"
+            expandedIcon="ios-remove"
           />
         </Content>
       </Container>

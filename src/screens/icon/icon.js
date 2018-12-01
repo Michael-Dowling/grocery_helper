@@ -23,7 +23,7 @@ class Icons extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -36,7 +36,7 @@ class Icons extends Component {
           <Grid>
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="logo-apple" style={{ color: "#999" }} />
+                <Icon name="ios-logo-apple" style={{ color: "#999" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   logo-apple
                 </Text>

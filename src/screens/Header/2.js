@@ -20,7 +20,7 @@ class Header2 extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -28,7 +28,7 @@ class Header2 extends Component {
           </Body>
           <Right>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="menu" />
+              <Icon name="ios-menu" />
             </Button>
           </Right>
         </Header>

@@ -70,9 +70,9 @@ class HeaderNB extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.openDrawer()}
             >
-              <Icon name="menu" />
+              <Icon name="ios-menu" />
             </Button>
           </Left>
           <Body>
@@ -95,7 +95,7 @@ class HeaderNB extends Component {
                   </Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" />
+                  <Icon name="ios-arrow-forward" />
                 </Right>
               </ListItem>}
           />

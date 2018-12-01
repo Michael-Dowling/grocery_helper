@@ -20,7 +20,7 @@ class HeaderNoShadow extends Component {
         <Header noShadow>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -28,7 +28,7 @@ class HeaderNoShadow extends Component {
           </Body>
           <Right>
             <Button transparent>
-              <Icon name="menu" />
+              <Icon name="ios-menu" />
             </Button>
           </Right>
         </Header>

@@ -21,7 +21,7 @@ class Header7 extends Component {
         <Header hasSubtitle>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>

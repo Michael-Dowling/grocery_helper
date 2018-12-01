@@ -20,7 +20,7 @@ class Header5 extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
+              <Icon name="ios-arrow-back" />
               <Text>Back</Text>
             </Button>
           </Left>
