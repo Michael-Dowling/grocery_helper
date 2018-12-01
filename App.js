@@ -36,7 +36,9 @@ export default class FirebaseReactNativeSample extends Component {
         rowHasChanged: (row1, row2) => row1 !== row2,
       }),
       dialogVisible : false,
-      quanDialogVisible : false
+      quanDialogVisible : false,
+      updateDialogVisible : false,
+      key : a
     };
     this.setState({dialogVisible: true})
   }
@@ -67,6 +69,8 @@ export default class FirebaseReactNativeSample extends Component {
   }
   handleCancel = () => {
     this.setState({ dialogVisible: false });
+    this.setState({ quanDialogVisible: false });
+    this.setState({ updateDialogVisible: false });
   };
   handleAdd = () => {
     var grocery = this.state.grocery;
@@ -81,9 +85,7 @@ export default class FirebaseReactNativeSample extends Component {
   render() {
     return (
       <View style={styles.container}>
-
         <StatusBar title="Food at Home" />
-
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderItem.bind(this)}
@@ -109,6 +111,15 @@ export default class FirebaseReactNativeSample extends Component {
             onChangeText={quantity => this.setState({quantity})}>
           </Dialog.Input>
         </Dialog.Container>
+        <Dialog.Container visible={this.state.updateDialogVisible}>
+          <Dialog.Title>Update Grocery Quantities</Dialog.Title>
+          <Dialog.Button label="Cancel" onPress={this.handleCancel}/>
+          <Dialog.Button label="Add" onPress={this.updateValues}/>
+          <Dialog.Input label="Enter new quantity:"
+            value={this.state.nQuantity}
+            onChangeText={nQuantity => this.setState({nQuantity})}>
+          </Dialog.Input>
+        </Dialog.Container>
       </View>
     )
   }
@@ -121,23 +132,39 @@ export default class FirebaseReactNativeSample extends Component {
     this.setState({dialogVisible: true});
   }
 
+  updateValues = () => {
+    this.setState({updateDialogVisible: false});
+    var nQuantity = this.state.nQuantity;
+    console.log(this.state.nQuantity);
+    var ref = firebase.database().ref('items/'+this.state.key);
+    console.log(ref);
+    //ref.remove();
+    ref.update({quantity: nQuantity});
+    //this.itemsRef.child(this.state.key)['quantity'].update({newQuantity});
+    //this.itemsRef.child(this.key)['quantity'].update({newQuantity});
+  }
   _renderItem(item) {
 
     const onPress = () => {
-      Alert.alert(
-        'Complete',
-        null,
-        [
-          {text: 'Complete', onPress: (text) => this.itemsRef.child(item._key).remove()},
-          {text: 'Cancel', onPress: (text) => console.log('Cancelled')}
-        ]
-      );
+      // Alert.alert(
+      //   'Did you use up this item?',
+      //   null,
+      //   [
+      //     {text: 'Yes', onPress: (text) => this.itemsRef.child(item._key).remove()},
+      //     {text: 'Cancel', onPress: (text) => console.log('Cancelled')}
+      //   ]
+      // );
+      var key = item._key;
+      console.log(key);
+      this.setState({key: key});
+      this.setState({updateDialogVisible: true});
     };
 
     return (
       <ListItem item={item} onPress={onPress} />
     );
   }
+  
 
 }
 
