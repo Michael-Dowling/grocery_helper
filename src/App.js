@@ -136,36 +136,16 @@ import NHToast from "./screens/toast/";
 import Actionsheet from "./screens/actionsheet";
 import NHAccordion from "./screens/accordion/";
 import NHDatePicker from "./screens/datepicker/";
+import BarcodeScan from "./screens/groceries/";
 
 const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
     Anatomy: { screen: Anatomy },
-    Header: { screen: Header },
-    Footer: { screen: Footer },
-    NHBadge: { screen: NHBadge },
-    NHButton: { screen: NHButton },
-    NHCard: { screen: NHCard },
-    NHCheckbox: { screen: NHCheckbox },
-    NHDeckSwiper: { screen: NHDeckSwiper },
-    NHFab: { screen: NHFab },
-    NHForm: { screen: NHForm },
-    NHIcon: { screen: NHIcon },
-    NHLayout: { screen: NHLayout },
     NHList: { screen: NHList },
-    ListSwipe: { screen: ListSwipe },
-    NHRadio: { screen: NHRadio },
-    NHSearchbar: { screen: NHSearchbar },
-    NHSpinner: { screen: NHSpinner },
-    NHPicker: { screen: NHPicker },
-    NHTab: { screen: NHTab },
-    NHThumbnail: { screen: NHThumbnail },
+    BarcodeScan: { screen: BarcodeScan},
     NHTypography: { screen: NHTypography },
-    Segment: { screen: Segment },
-    NHToast: { screen: NHToast },
-    Actionsheet: { screen: Actionsheet },
-    NHAccordion: { screen: NHAccordion },
-    NHDatePicker: { screen: NHDatePicker }
+
   },
   {
     initialRouteName: "Home",
