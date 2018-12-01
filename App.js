@@ -81,6 +81,18 @@ export default class FirebaseReactNativeSample extends Component {
     });
     this.setState({quanDialogVisible: false});
   }
+  scanBarcode(){
+    console.log("test")
+    var barcode = "055577420232";
+    var quantity = 4;
+    firebase.database().ref('UPCs/'+barcode).once('value',function (snapshot) {
+      var item = snapshot.val();
+      this.itemsRef.push({
+        item,
+        quantity
+      });
+    });
+  }
 
   render() {
     return (
@@ -93,6 +105,7 @@ export default class FirebaseReactNativeSample extends Component {
           style={styles.listview}/>
 
         <ActionButton onPress={this._addItem.bind(this)} title="Add" />
+        <ActionButton onPress={this.scanBarcode.bind(this)} title="Scan Barcode"/>
         <Dialog.Container visible={this.state.dialogVisible}>
           <Dialog.Title>Add Groceries</Dialog.Title>
           <Dialog.Button label="Cancel" onPress={this.handleCancel}/>
@@ -140,20 +153,10 @@ export default class FirebaseReactNativeSample extends Component {
     console.log(ref);
     //ref.remove();
     ref.update({quantity: nQuantity});
-    //this.itemsRef.child(this.state.key)['quantity'].update({newQuantity});
-    //this.itemsRef.child(this.key)['quantity'].update({newQuantity});
   }
   _renderItem(item) {
 
     const onPress = () => {
-      // Alert.alert(
-      //   'Did you use up this item?',
-      //   null,
-      //   [
-      //     {text: 'Yes', onPress: (text) => this.itemsRef.child(item._key).remove()},
-      //     {text: 'Cancel', onPress: (text) => console.log('Cancelled')}
-      //   ]
-      // );
       var key = item._key;
       console.log(key);
       this.setState({key: key});
