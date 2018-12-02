@@ -27,7 +27,7 @@ const firebaseConfig = {
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export default class FirebaseReactNativeSample extends Component {
+export default class gList extends Component {
   constructor(props) {
     super(props);
     this.itemsRef = this.getRef().child('items');
@@ -81,14 +81,16 @@ export default class FirebaseReactNativeSample extends Component {
     });
     this.setState({quanDialogVisible: false});
   }
+
   scanBarcode(){
-    console.log("test")
     var barcode = "055577420232";
-    var quantity = 4;
+    var quantity = "4";
     firebase.database().ref('UPCs/'+barcode).once('value',function (snapshot) {
-      var item = snapshot.val();
-      this.itemsRef.push({
-        item,
+      var grocery = snapshot.val();
+      console.log(snapshot.val());
+      console.log(grocery + " " + quantity);
+      firebase.database().ref('items/').push({
+        grocery,
         quantity
       });
     });
@@ -148,11 +150,13 @@ export default class FirebaseReactNativeSample extends Component {
   updateValues = () => {
     this.setState({updateDialogVisible: false});
     var nQuantity = this.state.nQuantity;
-    console.log(this.state.nQuantity);
     var ref = firebase.database().ref('items/'+this.state.key);
-    console.log(ref);
-    //ref.remove();
-    ref.update({quantity: nQuantity});
+    if(nQuantity != '0'){
+      ref.update({quantity: nQuantity});
+    }
+    else{
+      ref.remove();
+    }
   }
   _renderItem(item) {
 
